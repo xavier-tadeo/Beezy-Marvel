@@ -6,14 +6,14 @@ import useFetch from "./hooks/useFetch";
 import AppRouter from "./router/AppRouter";
 
 function App() {
-  const [characterArray, setCharacterArray] = useState([]);
+  const [charactersArray, setCharactersArray] = useState([]);
 
-  useFetch(setCharacterArray);
+  useFetch(setCharactersArray);
 
   return (
     <div className="App">
       <Header />
-      <UserContext.Provider value={{ characterArray, setCharacterArray }}>
+      <UserContext.Provider value={{ charactersArray, setCharactersArray }}>
         <AppRouter />
       </UserContext.Provider>
     </div>

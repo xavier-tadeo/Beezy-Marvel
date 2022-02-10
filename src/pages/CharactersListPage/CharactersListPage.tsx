@@ -7,11 +7,11 @@ import { ICharcters } from "../../interfaces/interfaces";
 const CharactersListPage = () => {
   const userContext = useContext(UserContext);
 
-  const { characterArray }: any = userContext;
+  const { charactersArray }: any = userContext;
 
   return (
     <div className="container-characters">
-      {characterArray.map((character: ICharcters) => {
+      {charactersArray.map((character: ICharcters) => {
         return <CharactersList character={character} key={character.id} />;
       })}
     </div>
