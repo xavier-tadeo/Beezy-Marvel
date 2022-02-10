@@ -3,7 +3,7 @@ import { useState } from "react";
 import Header from "./components/Header/Header";
 import { UserContext } from "./components/UserContext/UserContext";
 import useFetch from "./hooks/useFetch";
-import CharactersListPage from "./pages/CharactersListPage/CharactersListPage";
+import AppRouter from "./router/AppRouter";
 
 function App() {
   const [characterArray, setCharacterArray] = useState([]);
@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <Header />
       <UserContext.Provider value={{ characterArray, setCharacterArray }}>
-        <CharactersListPage />
+        <AppRouter />
       </UserContext.Provider>
     </div>
   );
