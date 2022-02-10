@@ -12,3 +12,8 @@ interface ICharcters {
 export interface ICharctersObject {
   character: ICharcters;
 }
+
+export interface IContextApp {
+  characterArray: Array<ICharctersObject>;
+  setCharacterArray: Function;
+}

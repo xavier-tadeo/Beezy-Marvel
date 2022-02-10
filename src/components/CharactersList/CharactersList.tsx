@@ -1,6 +1,6 @@
 import { ICharctersObject } from "../../interfaces/interfaces";
 
-const ListItem = ({ character }: ICharctersObject) => {
+const CharactersList = ({ character }: ICharctersObject) => {
   return (
     <div className="character">
       <h3 className="character__title">{character.name}</h3>
@@ -15,4 +15,4 @@ const ListItem = ({ character }: ICharctersObject) => {
   );
 };
 
-export default ListItem;
+export default CharactersList;
