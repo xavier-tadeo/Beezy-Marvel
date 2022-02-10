@@ -2,12 +2,12 @@ import { useEffect } from "react";
 
 import getCharacters from "../server/getCharacters";
 
-const useFetch = (setCharacter: Function) => {
+const useFetch = (setCharacterArray: Function) => {
   useEffect(() => {
     getCharacters().then((results) => {
-      setCharacter(results);
+      setCharacterArray(results);
     });
-  }, [setCharacter]);
+  }, [setCharacterArray]);
 };
 
 export default useFetch;
