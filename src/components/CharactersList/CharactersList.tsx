@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
-import { ICharctersObject } from "../../interfaces/interfaces";
+import { ICharactersObject } from "../../interfaces/interfaces";
 import "./CharactersList.scss";
 
-const CharactersList = ({ character }: ICharctersObject) => {
+const CharactersList = ({ character }: ICharactersObject) => {
   return (
     <div className="character">
       <h3 className="character__title">{character.name}</h3>
