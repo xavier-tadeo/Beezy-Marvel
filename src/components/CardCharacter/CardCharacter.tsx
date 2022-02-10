@@ -1,6 +1,6 @@
 import { ICharctersObject } from "../../interfaces/interfaces";
 
-const CardCharacter = ({ character }: ICharctersObject) => {
+const CardCharacter = ({ character }: ICharctersObject | any) => {
   return (
     <div>
       <h2>{character.name}</h2>

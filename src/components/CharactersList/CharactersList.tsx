@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { ICharctersObject } from "../../interfaces/interfaces";
 import "./CharactersList.scss";
 
@@ -18,7 +20,7 @@ const CharactersList = ({ character }: ICharctersObject) => {
           <p className="character__description">{character.description}</p>
         )}
       </div>
-      <button className="character__button">More Info...</button>
+      <Link to={`/${character.id}`}>More Info...</Link>
     </div>
   );
 };
