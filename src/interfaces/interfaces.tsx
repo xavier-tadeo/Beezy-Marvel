@@ -3,18 +3,22 @@ interface IThumbnail {
   extension: string;
 }
 
-export interface ICharcters {
+export interface ICharacters {
   name: string;
   description: string;
   thumbnail: IThumbnail;
   id: string;
 }
 
-export interface ICharctersObject {
-  character: ICharcters;
+export interface ICharactersObject {
+  character: ICharacters;
+}
+
+export interface ICharacterArray {
+  charactersArray: [];
 }
 
 export interface IContextApp {
-  characterArray: Array<ICharctersObject>;
-  setCharacterArray: Function;
+  charactersArray: Array<ICharactersObject>;
+  setCharactersArray: Function;
 }

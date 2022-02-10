@@ -1,7 +1,9 @@
-import { ICharctersObject } from "../../interfaces/interfaces";
+import { Link } from "react-router-dom";
+
+import { ICharactersObject } from "../../interfaces/interfaces";
 import "./CharactersList.scss";
 
-const CharactersList = ({ character }: ICharctersObject) => {
+const CharactersList = ({ character }: ICharactersObject) => {
   return (
     <div className="character">
       <h3 className="character__title">{character.name}</h3>
@@ -18,7 +20,7 @@ const CharactersList = ({ character }: ICharctersObject) => {
           <p className="character__description">{character.description}</p>
         )}
       </div>
-      <button className="character__button">More Info...</button>
+      <Link to={`/${character.id}`}>More Info...</Link>
     </div>
   );
 };
