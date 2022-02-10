@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
 
+import getCharacterId from "../../helpers/getCharacterId";
 import { UserContext } from "../UserContext/UserContext";
 
 const CardCharacter = () => {
@@ -8,7 +9,9 @@ const CardCharacter = () => {
 
   const userContext = useContext(UserContext);
 
-  const { characterArray }: any = userContext;
+  const { charactersArray }: any = userContext;
+
+  const character = getCharacterId(id, charactersArray);
 
   return (
     <div>
