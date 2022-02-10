@@ -1,9 +1,11 @@
 import CharactersListPage from "../CharactersListPage/CharactersListPage";
 
-export const HomePage = () => {
+const HomePage = () => {
   return (
     <div>
       <CharactersListPage />
     </div>
   );
 };
+
+export default HomePage;
