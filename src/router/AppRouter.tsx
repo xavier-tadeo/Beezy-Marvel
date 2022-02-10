@@ -9,7 +9,7 @@ const AppRouter = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/*" element={<CardCharacter />} />
+          <Route path="/:id" element={<CardCharacter />} />
         </Routes>
       </BrowserRouter>
     </div>

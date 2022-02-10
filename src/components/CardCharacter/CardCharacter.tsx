@@ -1,6 +1,15 @@
-import { ICharctersObject } from "../../interfaces/interfaces";
+import { useContext } from "react";
+import { useParams } from "react-router-dom";
 
-const CardCharacter = ({ character }: ICharctersObject | any) => {
+import { UserContext } from "../UserContext/UserContext";
+
+const CardCharacter = () => {
+  const { id } = useParams();
+
+  const userContext = useContext(UserContext);
+
+  const { characterArray }: any = userContext;
+
   return (
     <div>
       <h2>{character.name}</h2>
