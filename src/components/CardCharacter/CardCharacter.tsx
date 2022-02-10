@@ -15,8 +15,6 @@ const CardCharacter = () => {
 
   const characterOne = getCharacterId(id, charactersArray);
 
-  console.log(characterOne);
-
   const { name, thumbnail, description, comics, series, stories, events } =
     characterOne;
 
