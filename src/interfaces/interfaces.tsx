@@ -3,10 +3,11 @@ interface IThumbnail {
   extension: string;
 }
 
-interface ICharcters {
+export interface ICharcters {
   name: string;
   description: string;
   thumbnail: IThumbnail;
+  id: string;
 }
 
 export interface ICharctersObject {
