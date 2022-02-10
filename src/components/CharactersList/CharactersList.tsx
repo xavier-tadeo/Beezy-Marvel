@@ -1,13 +1,16 @@
-const ListItem = ({ character }) => {
+import { ICharctersObject } from "../../interfaces/interfaces";
+
+const ListItem = ({ character }: ICharctersObject) => {
   return (
-    <div>
-      <h3 className="dsds">{character.name}</h3>
-      <p>{character.description}</p>
+    <div className="character">
+      <h3 className="character__title">{character.name}</h3>
+      <p className="character__description">{character.description}</p>
       <img
+        className="character__image"
         src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
-        alt="super heroes"
+        alt={character.name}
       ></img>
-      <button>More Info...</button>
+      <button className="character__button">More Info...</button>
     </div>
   );
 };
