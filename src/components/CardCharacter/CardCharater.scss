@@ -10,6 +10,7 @@
     border: 0;
     height: 40px;
     font-size: 18px;
+    font-weight: 600;
     color: $red;
     background-color: $blueBack;
     font-family: $fontButton;
@@ -55,5 +56,21 @@
     margin: 0;
     font-family: $fontCaracteristics;
     letter-spacing: 2px;
+  }
+
+  &__list {
+    list-style: none;
+    text-align: center;
+    margin: 10px 0;
+    padding: 0 10px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  &__item {
+    padding: 10px;
+    font-family: $fontButton;
+    font-weight: 600;
+    font-size: 16px;
   }
 }

@@ -45,7 +45,7 @@ const CardCharacter = () => {
           <ul className="characterOne__list">
             {comics.items.map(
               (comic: ICaracteristicsCharacter, index: string) => (
-                <li className="character__item" key={index}>
+                <li className="characterOne__item" key={index}>
                   {comic.name}
                 </li>
               )
@@ -59,7 +59,7 @@ const CardCharacter = () => {
           <ul className="characterOne__list">
             {series.items.map(
               (serie: ICaracteristicsCharacter, index: string) => (
-                <li className="character__item" key={index}>
+                <li className="characterOne__item" key={index}>
                   {serie.name}
                 </li>
               )
@@ -73,7 +73,7 @@ const CardCharacter = () => {
           <ul className="characterOne__list">
             {stories.items.map(
               (storie: ICaracteristicsCharacter, index: string) => (
-                <li className="character__item" key={index}>
+                <li className="characterOne__item" key={index}>
                   {storie.name}
                 </li>
               )
@@ -87,7 +87,7 @@ const CardCharacter = () => {
           <ul className="characterOne__list">
             {events.items.map(
               (event: ICaracteristicsCharacter, index: string) => (
-                <li className="character__item" key={index}>
+                <li className="characterOne__item" key={index}>
                   {event.name}
                 </li>
               )
