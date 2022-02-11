@@ -1,6 +1,76 @@
+@import "/src/styles/extends";
+@import "/src/styles/variables";
+
 .characterOne {
+  &__button {
+    position: fixed;
+    left: 15px;
+    top: 10px;
+    border-radius: 30px;
+    border: 0;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 600;
+    color: $red;
+    background-color: $blueBack;
+    font-family: $fontButton;
+    @extend %flex-center-center;
+  }
+
+  &__title {
+    text-align: center;
+    color: $blue;
+    margin: 0;
+    padding: 20px;
+    border-bottom: 1px solid $blue;
+    font-family: $fontNameCharacter;
+  }
+
+  &__image-container {
+    @extend %flex-center-center;
+  }
+
   &__image {
     height: 300px;
     width: 300px;
+    margin-top: 15px;
+    border-radius: 50%;
+  }
+
+  &__description {
+    margin: 15px 0 0;
+    padding: 10px 20px;
+    font-family: $fontDescription;
+    font-size: 18px;
+  }
+
+  &__comics-title,
+  &__series-title,
+  &__stories-title,
+  &__events-title {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    margin: 0;
+    font-family: $fontCaracteristics;
+    letter-spacing: 2px;
+  }
+
+  &__list {
+    list-style: none;
+    text-align: center;
+    margin: 10px 0;
+    padding: 0 10px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  &__item {
+    padding: 10px;
+    font-family: $fontButton;
+    font-weight: 600;
+    font-size: 16px;
   }
 }
