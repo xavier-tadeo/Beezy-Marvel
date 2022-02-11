@@ -8,12 +8,21 @@ import AppRouter from "./router/AppRouter";
 function App() {
   const [charactersArray, setCharactersArray] = useState([]);
 
-  useFetch(setCharactersArray);
+  const [orderCharacters, setOrderCharacters] = useState(true);
+
+  useFetch(setCharactersArray, orderCharacters);
 
   return (
     <div className="App">
       <Header />
-      <UserContext.Provider value={{ charactersArray, setCharactersArray }}>
+      <UserContext.Provider
+        value={{
+          charactersArray,
+          setCharactersArray,
+          orderCharacters,
+          setOrderCharacters,
+        }}
+      >
         <AppRouter />
       </UserContext.Provider>
     </div>
