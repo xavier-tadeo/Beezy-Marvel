@@ -22,3 +22,12 @@ export interface IContextApp {
   charactersArray: Array<ICharactersObject>;
   setCharactersArray: Function;
 }
+
+export interface ICaracteristicsCharacter {
+  name: string;
+}
+
+export interface IEventsCharacter {
+  available: Number;
+  items: [];
+}
