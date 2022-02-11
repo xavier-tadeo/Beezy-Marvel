@@ -1,11 +1,16 @@
+@import "/src/styles/extends";
+@import "/src/styles/variables";
+
 .header {
   text-align: center;
 
   &__title {
-    color: #e20512;
+    color: $blue;
     font-size: 50px;
     margin: 0;
     padding: 10px;
-    border-bottom: 1px solid #2d3195;
+    border-bottom: 1px solid $blue;
+    font-family: $fontTitle;
+    letter-spacing: 2px;
   }
 }
