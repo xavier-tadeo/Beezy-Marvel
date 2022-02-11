@@ -1,3 +1,5 @@
+import "./Sort.scss";
+
 const Sort = () => {
   return (
     <div className="sort">

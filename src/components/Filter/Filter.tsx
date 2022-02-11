@@ -1,3 +1,5 @@
+import "./Filter.scss";
+
 const Filter = () => {
   return (
     <form className="filter">

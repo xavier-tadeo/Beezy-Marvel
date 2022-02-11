@@ -1,5 +1,6 @@
 import Filter from "../../components/Filter/Filter";
 import Sort from "../../components/Sort/Sort";
+import "./SortAndFilterPage.scss";
 
 const SortAndFilterPage = () => {
   return (
