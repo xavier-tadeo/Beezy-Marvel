@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import getCharacterId from "../../helpers/getCharacterId";
+import { ICaracteristicsCharacter } from "../../interfaces/interfaces";
 import { UserContext } from "../UserContext/UserContext";
 import "./CardCharater.scss";
 
@@ -17,7 +18,7 @@ const CardCharacter = () => {
 
   const { name, thumbnail, description, comics, series, stories, events } =
     characterOne;
-
+  console.log(characterOne);
   const handleReturn = () => {
     navigate(-1);
   };
@@ -35,38 +36,62 @@ const CardCharacter = () => {
           alt={name}
         />
         <p className="characterOne__description">{description}</p>
-        <h5 className="characterOne__comics">
-          Appears in {comics.available} comics
-        </h5>
-        <ul>
-          {comics.items.map((comic: any) => (
-            <li>{comic.name}</li>
-          ))}
-        </ul>
-        <h5 className="characterOne__series">
-          Appears in {series.available} series
-        </h5>
-        <ul>
-          {series.items.map((serie: any) => (
-            <li>{serie.name}</li>
-          ))}
-        </ul>
-        <h5 className="characterOne__stories">
-          Appears in {stories.available} stories
-        </h5>
-        <ul>
-          {stories.items.map((storie: any) => (
-            <li>{storie.name}</li>
-          ))}
-        </ul>
-        <h5 className="characterOne__events">
-          Appears in {events.available} events
-        </h5>
-        <ul>
-          {events.items.map((event: any) => (
-            <li>{event.name}</li>
-          ))}
-        </ul>
+        <div className="characterOne__comics">
+          <h5 className="characterOne__comics-title">
+            Appears in {comics.available} comics
+          </h5>
+          <ul className="characterOne__list">
+            {comics.items.map(
+              (comic: ICaracteristicsCharacter, index: string) => (
+                <li className="character__item" key={index}>
+                  {comic.name}
+                </li>
+              )
+            )}
+          </ul>
+        </div>
+        <div className="characterOne__series">
+          <h5 className="characterOne__series-title">
+            Appears in {series.available} series
+          </h5>
+          <ul className="characterOne__list">
+            {series.items.map(
+              (serie: ICaracteristicsCharacter, index: string) => (
+                <li className="character__item" key={index}>
+                  {serie.name}
+                </li>
+              )
+            )}
+          </ul>
+        </div>
+        <div className="characterOne__stories">
+          <h5 className="characterOne__stories-title">
+            Appears in {stories.available} stories
+          </h5>
+          <ul className="characterOne__list">
+            {stories.items.map(
+              (storie: ICaracteristicsCharacter, index: string) => (
+                <li className="character__item" key={index}>
+                  {storie.name}
+                </li>
+              )
+            )}
+          </ul>
+        </div>
+        <div className="characterOne__events">
+          <h5 className="characterOne__events-title">
+            Appears in {events.available} events
+          </h5>
+          <ul className="characterOne__list">
+            {events.items.map(
+              (event: ICaracteristicsCharacter, index: string) => (
+                <li className="character__item" key={index}>
+                  {event.name}
+                </li>
+              )
+            )}
+          </ul>
+        </div>
       </div>
     </>
   );
