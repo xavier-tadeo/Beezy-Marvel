@@ -1,0 +1,5 @@
+@import "/src/styles/extends";
+
+.container-characters {
+  @extend %flex-column-center;
+}
