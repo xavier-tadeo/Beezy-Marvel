@@ -13,18 +13,30 @@
     color: $red;
     background-color: $blueBack;
     font-family: $fontButton;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
+    @extend %flex-center-center;
   }
 
   &__title {
     text-align: center;
+    color: $blue;
+    margin: 0;
+    padding: 20px;
+    border-bottom: 1px solid $blue;
+  }
+
+  &__image-container {
+    @extend %flex-center-center;
   }
 
   &__image {
     height: 300px;
     width: 300px;
+    margin-top: 15px;
+    border-radius: 50%;
+  }
+
+  &__description {
+    margin: 15px 0 0;
+    padding: 10px;
   }
 }

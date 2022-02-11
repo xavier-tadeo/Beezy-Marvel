@@ -30,11 +30,13 @@ const CardCharacter = () => {
           Return
         </button>
         <h2 className="characterOne__title">{name}</h2>
-        <img
-          className="characterOne__image"
-          src={`${thumbnail.path}.${thumbnail.extension}`}
-          alt={name}
-        />
+        <div className="characterOne__image-container">
+          <img
+            className="characterOne__image"
+            src={`${thumbnail.path}.${thumbnail.extension}`}
+            alt={name}
+          />
+        </div>
         <p className="characterOne__description">{description}</p>
         <div className="characterOne__comics">
           <h5 className="characterOne__comics-title">
