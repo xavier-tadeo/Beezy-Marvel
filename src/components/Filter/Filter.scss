@@ -1,0 +1,17 @@
+@import "/src/styles/extends";
+@import "/src/styles/variables";
+
+.filter {
+  margin-top: 20px;
+  padding: 10px;
+  @extend %flex-column-center;
+
+  &__label {
+    color: $red;
+  }
+
+  &__select {
+    margin-top: 10px;
+    color: $blue;
+  }
+}

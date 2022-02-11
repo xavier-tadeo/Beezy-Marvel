@@ -4,17 +4,17 @@
 .sort {
   display: flex;
   &__button {
-    background-color: $blueBack;
     font-family: $fontButton;
     font-weight: 600;
     color: $red;
     position: absolute;
     border: 0;
-    border-radius: 50%;
+    border-radius: 30%;
     font-size: 16px;
     right: 20px;
-    height: 90px;
+    height: 60px;
     width: 100px;
+    top: 160px;
     @extend %flex-center-center;
   }
 }
