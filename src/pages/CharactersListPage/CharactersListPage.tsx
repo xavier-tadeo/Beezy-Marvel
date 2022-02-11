@@ -1,3 +1,5 @@
+import "./CharactersListPage.scss";
+
 import { useContext } from "react";
 import CharactersList from "../../components/CharactersList/CharactersList";
 
