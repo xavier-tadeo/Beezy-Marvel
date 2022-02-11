@@ -18,7 +18,7 @@ const CardCharacter = () => {
 
   const { name, thumbnail, description, comics, series, stories, events } =
     characterOne;
-  console.log(characterOne);
+
   const handleReturn = () => {
     navigate(-1);
   };

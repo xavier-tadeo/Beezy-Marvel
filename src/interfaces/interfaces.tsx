@@ -21,6 +21,8 @@ export interface ICharacterArray {
 export interface IContextApp {
   charactersArray: Array<ICharactersObject>;
   setCharactersArray: Function;
+  orderCharacters: boolean;
+  setOrderCharacters: Function;
 }
 
 export interface ICaracteristicsCharacter {
