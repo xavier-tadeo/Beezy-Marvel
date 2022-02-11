@@ -1,4 +1,28 @@
+@import "/src/styles/extends";
+@import "/src/styles/variables";
+
 .characterOne {
+  &__button {
+    position: fixed;
+    left: 15px;
+    top: 10px;
+    border-radius: 30px;
+    border: 0;
+    height: 40px;
+    font-size: 18px;
+    color: $red;
+    background-color: $blueBack;
+    font-family: $fontButton;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
   &__image {
     height: 300px;
     width: 300px;
