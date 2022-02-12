@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 
 import getCharacterId from "../../helpers/getCharacterId";
 import { ICaracteristicsCharacter } from "../../interfaces/interfaces";
@@ -7,6 +7,7 @@ import { UserContext } from "../UserContext/UserContext";
 import "./CardCharater.scss";
 
 const CardCharacter = () => {
+  window.scroll(0, 0);
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -15,6 +16,10 @@ const CardCharacter = () => {
   const { charactersArray }: any = userContext;
 
   const characterOne = getCharacterId(id, charactersArray);
+
+  if (!characterOne) {
+    return <Navigate to={"/"} />;
+  }
 
   const { name, thumbnail, description, comics, series, stories, events } =
     characterOne;
@@ -25,10 +30,7 @@ const CardCharacter = () => {
 
   return (
     <>
-      <div className="characterOne">
-        <button className="characterOne__button" onClick={handleReturn}>
-          Return
-        </button>
+      <div className="characterOne" onClick={handleReturn}>
         <h2 className="characterOne__title">{name}</h2>
         <div className="characterOne__image-container">
           <img
@@ -37,7 +39,13 @@ const CardCharacter = () => {
             alt={name}
           />
         </div>
-        <p className="characterOne__description">{description}</p>
+        <button className="characterOne__button" onClick={handleReturn}>
+          Return
+        </button>
+        <div className="characterOne__description">
+          <h5 className="characterOne__description-title">Historie</h5>
+          <p className="characterOne__description-paragraph">{description}</p>
+        </div>
         <div className="characterOne__comics">
           <h5 className="characterOne__comics-title">
             Appears in {comics.available} comics
