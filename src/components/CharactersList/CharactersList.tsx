@@ -8,21 +8,14 @@ const CharactersList = ({ character }: ICharactersObject) => {
     <div className="character">
       <div className="character__info">
         <h3 className="character__title">{character.name}</h3>
-
-        <h5 className="character__title-description">Description</h5>
-        {!character.description ? (
-          <p className="character__description">Don't have a description</p>
-        ) : (
-          <p className="character__description">{character.description}</p>
-        )}
-        <Link to={`/${character.id}`}>More Info...</Link>
-      </div>
-      <div className="character__container-image">
         <img
           className="character__image"
           src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
           alt={character.name}
-        ></img>
+        ></img>{" "}
+        <Link className="character__link" to={`/${character.id}`}>
+          More Info...
+        </Link>
       </div>
     </div>
   );
