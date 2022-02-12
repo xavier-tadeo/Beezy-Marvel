@@ -33,3 +33,5 @@ export interface IEventsCharacter {
   available: Number;
   items: [];
 }
+
+export type FormElement = React.FormEvent<HTMLFormElement>;
