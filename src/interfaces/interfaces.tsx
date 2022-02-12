@@ -23,6 +23,8 @@ export interface IContextApp {
   setCharactersArray: Function;
   orderCharacters: boolean;
   setOrderCharacters: Function;
+  nameCharacter: string;
+  setNameCharacter: Function;
 }
 
 export interface ICaracteristicsCharacter {
