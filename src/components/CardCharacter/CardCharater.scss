@@ -2,27 +2,28 @@
 @import "/src/styles/variables";
 
 .characterOne {
+  @extend %flex-column-center;
   &__button {
-    position: fixed;
-    left: 15px;
-    top: 10px;
-    border-radius: 30px;
-    border: 0;
-    height: 40px;
-    font-size: 18px;
+    font-family: $fontDescription;
     font-weight: 600;
     color: $red;
-    background-color: $blueBack;
-    font-family: $fontButton;
+    background-color: #fff;
+    border: 0;
+    border-radius: 20px 0;
+    font-size: 16px;
+    right: 20px;
+    height: 35px;
+    width: 70px;
+    margin-top: 10px;
     @extend %flex-center-center;
   }
 
   &__title {
     text-align: center;
-    color: $blue;
+    color: #fff;
     margin: 0;
     padding: 20px;
-    border-bottom: 1px solid $blue;
+    border-bottom: 1px solid #fff;
     font-family: $fontNameCharacter;
   }
 
@@ -37,13 +38,15 @@
     border-radius: 50%;
   }
 
-  &__description {
-    margin: 15px 0 0;
-    padding: 10px 20px;
+  &__description-paragraph {
+    padding: 20px;
+    color: #fff;
     font-family: $fontDescription;
     font-size: 18px;
+    margin: 0;
   }
 
+  &__description-title,
   &__comics-title,
   &__series-title,
   &__stories-title,
@@ -56,6 +59,7 @@
     margin: 0;
     font-family: $fontCaracteristics;
     letter-spacing: 2px;
+    margin-top: 10px;
   }
 
   &__list {
@@ -72,5 +76,6 @@
     font-family: $fontButton;
     font-weight: 600;
     font-size: 16px;
+    color: #fff;
   }
 }
