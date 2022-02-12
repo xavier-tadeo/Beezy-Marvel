@@ -2,12 +2,16 @@ import { useEffect } from "react";
 
 import getCharacters from "../server/getCharacters";
 
-const useFetch = (setCharactersArray: Function, orderCharacters: boolean) => {
+const useFetch = (
+  setCharactersArray: Function,
+  orderCharacters: boolean,
+  nameCharacter: string
+) => {
   useEffect(() => {
-    getCharacters(orderCharacters).then((results) => {
+    getCharacters(orderCharacters, nameCharacter).then((results) => {
       setCharactersArray(results);
     });
-  }, [setCharactersArray, orderCharacters]);
+  }, [setCharactersArray, orderCharacters, nameCharacter]);
 };
 
 export default useFetch;
