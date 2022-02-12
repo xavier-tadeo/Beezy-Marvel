@@ -9,6 +9,7 @@ const useFetch = (
 ) => {
   useEffect(() => {
     getCharacters(orderCharacters, nameCharacter).then((results) => {
+      console.log(nameCharacter);
       setCharactersArray(results);
     });
   }, [setCharactersArray, orderCharacters, nameCharacter]);
