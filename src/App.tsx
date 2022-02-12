@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import { UserContext } from "./components/UserContext/UserContext";
 import useFetch from "./hooks/useFetch";
 import AppRouter from "./router/AppRouter";
+import "./App.scss";
 
 function App() {
   const [charactersArray, setCharactersArray] = useState([]);

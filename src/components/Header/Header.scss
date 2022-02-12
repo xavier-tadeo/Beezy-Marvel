@@ -2,15 +2,9 @@
 @import "/src/styles/variables";
 
 .header {
-  text-align: center;
-
+  display: flex;
+  justify-content: center;
   &__title {
-    color: $blue;
-    font-size: 50px;
-    margin: 0;
-    padding: 10px;
-    border-bottom: 1px solid $blue;
-    font-family: $fontTitle;
-    letter-spacing: 2px;
+    height: 150px;
   }
 }
