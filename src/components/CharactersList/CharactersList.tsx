@@ -14,7 +14,7 @@ const CharactersList = ({ character }: ICharactersObject) => {
           alt={character.name}
         ></img>{" "}
         <Link className="character__link" to={`/${character.id}`}>
-          More Info...
+          More Info
         </Link>
       </div>
     </div>
