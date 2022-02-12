@@ -3,7 +3,11 @@ import "./Header.scss";
 const Header = () => {
   return (
     <div className="header">
-      <h1 className="header__title">Marvel Characters</h1>
+      <img
+        className="header__title"
+        src="mr2.png"
+        alt="Logo to Marvel Studios"
+      />
     </div>
   );
 };
