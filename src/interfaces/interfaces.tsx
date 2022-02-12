@@ -23,6 +23,8 @@ export interface IContextApp {
   setCharactersArray: Function;
   orderCharacters: boolean;
   setOrderCharacters: Function;
+  nameCharacter: string;
+  setNameCharacter: Function;
 }
 
 export interface ICaracteristicsCharacter {
@@ -33,3 +35,5 @@ export interface IEventsCharacter {
   available: Number;
   items: [];
 }
+
+export type FormElement = React.FormEvent<HTMLFormElement>;

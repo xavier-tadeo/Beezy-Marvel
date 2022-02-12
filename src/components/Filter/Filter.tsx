@@ -1,12 +1,35 @@
+import { useContext } from "react";
+
+import { FormElement } from "../../interfaces/interfaces";
+import { UserContext } from "../UserContext/UserContext";
 import "./Filter.scss";
 
 const Filter = () => {
+  const userContext = useContext(UserContext);
+
+  const { nameCharacter, setNameCharacter }: any = userContext;
+
+  const onChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
+    setNameCharacter(evt.target.value);
+  };
+
+  const onSubmit = (event: FormElement) => {
+    event.preventDefault();
+    console.log(nameCharacter);
+  };
+
   return (
-    <form className="filter">
-      <label htmlFor="filter" className="filter__label">
+    <form className="filter" onSubmit={onSubmit} autoComplete="off">
+      <label htmlFor="name" className="filter__label">
         Write name of Character
       </label>
-      <input type="text" className="filter__input" id="filter" />
+      <input
+        type="text"
+        className="filter__input"
+        id="name"
+        value={nameCharacter}
+        onChange={onChange}
+      />
     </form>
   );
 };

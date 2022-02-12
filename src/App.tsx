@@ -11,7 +11,9 @@ function App() {
 
   const [orderCharacters, setOrderCharacters] = useState(true);
 
-  useFetch(setCharactersArray, orderCharacters);
+  const [nameCharacter, setNameCharacter] = useState("");
+
+  useFetch(setCharactersArray, orderCharacters, nameCharacter);
 
   return (
     <div className="App">
@@ -22,6 +24,8 @@ function App() {
           setCharactersArray,
           orderCharacters,
           setOrderCharacters,
+          nameCharacter,
+          setNameCharacter,
         }}
       >
         <AppRouter />
