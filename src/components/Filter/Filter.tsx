@@ -1,20 +1,21 @@
-import { useState } from "react";
+import { useContext } from "react";
+
 import { FormElement } from "../../interfaces/interfaces";
+import { UserContext } from "../UserContext/UserContext";
 import "./Filter.scss";
 
 const Filter = () => {
-  const [nameCharacter, setNameCharacter] = useState({ name: "" });
+  const userContext = useContext(UserContext);
+
+  const { nameCharacter, setNameCharacter }: any = userContext;
 
   const onChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
-    setNameCharacter({
-      ...nameCharacter,
-      [evt.target.id]: evt.target.value,
-    });
+    setNameCharacter(evt.target.value);
   };
 
   const onSubmit = (event: FormElement) => {
     event.preventDefault();
-    console.log("holaaaaaa");
+    console.log(nameCharacter);
   };
 
   return (
@@ -26,7 +27,7 @@ const Filter = () => {
         type="text"
         className="filter__input"
         id="name"
-        value={nameCharacter.name}
+        value={nameCharacter}
         onChange={onChange}
       />
     </form>
