@@ -3,13 +3,14 @@
 
 .sort {
   display: flex;
+  justify-content: center;
   &__button {
-    font-family: $fontButton;
+    font-family: $fontDescription;
     font-weight: 600;
     color: $red;
-    position: absolute;
+    background-color: #fff;
     border: 0;
-    border-radius: 30%;
+    border-radius: 20px 0;
     font-size: 16px;
     right: 20px;
     height: 60px;
