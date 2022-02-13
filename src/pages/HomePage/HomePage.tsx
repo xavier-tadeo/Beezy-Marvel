@@ -1,4 +1,4 @@
-import { Footer } from "../../components/Footer/Footer";
+import Footer from "../../components/Footer/Footer";
 import CharactersListPage from "../CharactersListPage/CharactersListPage";
 import SortAndFilterPage from "../SortAndFilterPage/SortAndFilterPage";
 

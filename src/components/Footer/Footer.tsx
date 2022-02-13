@@ -1,8 +1,12 @@
-export const Footer = () => {
+import "./Footer.scss";
+
+const Footer = () => {
   return (
-    <div className="fotter">
-      <button className="fotter__button">Previus</button>
-      <button className="fotter__button">Next</button>
+    <div className="footer">
+      <button className="footer__button">Previus</button>
+      <button className="footer__button">Next</button>
     </div>
   );
 };
+
+export default Footer;
