@@ -13,7 +13,11 @@ function App() {
 
   const [nameCharacter, setNameCharacter] = useState("");
 
-  useFetch(setCharactersArray, orderCharacters, nameCharacter);
+  const [limit, setLimit] = useState(20);
+
+  const [offset, setOffset] = useState(0);
+
+  useFetch(setCharactersArray, orderCharacters, nameCharacter, limit, offset);
 
   return (
     <div className="App">
@@ -26,6 +30,10 @@ function App() {
           setOrderCharacters,
           nameCharacter,
           setNameCharacter,
+          limit,
+          setLimit,
+          offset,
+          setOffset,
         }}
       >
         <AppRouter />
