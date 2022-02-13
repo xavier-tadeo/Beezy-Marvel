@@ -1,0 +1,25 @@
+@import "/src/styles/extends";
+@import "/src/styles/variables";
+
+.footer {
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+
+  &__button {
+    font-family: $fontDescription;
+    font-weight: 600;
+    color: $red;
+    background-color: #fff;
+    border: 0;
+    border-radius: 20px 0;
+    font-size: 16px;
+    right: 20px;
+    height: 60px;
+    width: 100px;
+    top: 160px;
+    @extend %flex-center-center;
+  }
+}
