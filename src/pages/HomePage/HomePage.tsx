@@ -1,3 +1,4 @@
+import { Footer } from "../../components/Footer/Footer";
 import CharactersListPage from "../CharactersListPage/CharactersListPage";
 import SortAndFilterPage from "../SortAndFilterPage/SortAndFilterPage";
 
@@ -6,6 +7,7 @@ const HomePage = () => {
     <div>
       <SortAndFilterPage />
       <CharactersListPage />
+      <Footer />
     </div>
   );
 };

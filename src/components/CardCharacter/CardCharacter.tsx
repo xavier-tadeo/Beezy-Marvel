@@ -39,9 +39,7 @@ const CardCharacter = () => {
             alt={name}
           />
         </div>
-        <button className="characterOne__button" onClick={handleReturn}>
-          Return
-        </button>
+
         <div className="characterOne__description">
           <h5 className="characterOne__description-title">Historie</h5>
           <p className="characterOne__description-paragraph">{description}</p>
