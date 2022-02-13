@@ -1,6 +1,6 @@
 const getCharacters = async (orderCharacters: boolean, nameCharacter = "") => {
   let order;
-  console.log(nameCharacter);
+
   if (orderCharacters) {
     order = "name";
   } else {
@@ -23,7 +23,7 @@ const getCharacters = async (orderCharacters: boolean, nameCharacter = "") => {
 
   const { data } = await response.json();
   const { results } = await data;
-  console.log(results);
+
   return results;
 };
 
