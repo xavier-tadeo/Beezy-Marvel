@@ -5,13 +5,17 @@ import getCharacters from "../server/getCharacters";
 const useFetch = (
   setCharactersArray: Function,
   orderCharacters: boolean,
-  nameCharacter: string
+  nameCharacter: string,
+  limit: number,
+  offset: number
 ) => {
   useEffect(() => {
-    getCharacters(orderCharacters, nameCharacter).then((results) => {
-      setCharactersArray(results);
-    });
-  }, [setCharactersArray, orderCharacters, nameCharacter]);
+    getCharacters(orderCharacters, nameCharacter, limit, offset).then(
+      (results) => {
+        setCharactersArray(results);
+      }
+    );
+  }, [setCharactersArray, orderCharacters, nameCharacter, limit, offset]);
 };
 
 export default useFetch;
