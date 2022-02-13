@@ -22,4 +22,8 @@
     top: 160px;
     @extend %flex-center-center;
   }
+
+  &__button:disabled {
+    display: none;
+  }
 }

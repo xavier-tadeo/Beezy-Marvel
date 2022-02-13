@@ -25,6 +25,10 @@ export interface IContextApp {
   setOrderCharacters: Function;
   nameCharacter: string;
   setNameCharacter: Function;
+  limit: number;
+  setLimit: Function;
+  offset: number;
+  setOffset: Function;
 }
 
 export interface ICaracteristicsCharacter {

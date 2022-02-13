@@ -1,4 +1,9 @@
-const getCharacters = async (orderCharacters: boolean, nameCharacter = "") => {
+const getCharacters = async (
+  orderCharacters: boolean,
+  nameCharacter = "",
+  limit = 20,
+  offset = 0
+) => {
   let order;
 
   if (orderCharacters) {
@@ -6,8 +11,8 @@ const getCharacters = async (orderCharacters: boolean, nameCharacter = "") => {
   } else {
     order = "-name";
   }
-  const limit = "20";
-  const offset = "0";
+  // const limit = "20";
+  // const offset = "0";
 
   const url: any = process.env.REACT_APP_URL;
   let response;
