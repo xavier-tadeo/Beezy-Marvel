@@ -11,8 +11,6 @@ const getCharacters = async (
   } else {
     order = "-name";
   }
-  // const limit = "20";
-  // const offset = "0";
 
   const url: any = process.env.REACT_APP_URL;
   let response;
