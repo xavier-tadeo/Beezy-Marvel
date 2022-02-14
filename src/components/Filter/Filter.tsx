@@ -15,7 +15,6 @@ const Filter = () => {
 
   const onSubmit = (event: FormElement) => {
     event.preventDefault();
-    console.log(nameCharacter);
   };
 
   return (
@@ -24,6 +23,7 @@ const Filter = () => {
         Write name of Character
       </label>
       <input
+        placeholder="Hulk, Thor, Spider ..."
         type="text"
         className="filter__input"
         id="name"
