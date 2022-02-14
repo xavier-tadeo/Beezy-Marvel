@@ -3,7 +3,7 @@ import { Navigate, useNavigate, useParams } from "react-router-dom";
 
 import getCharacterId from "../../helpers/getCharacterId";
 import { ICaracteristicsCharacter } from "../../interfaces/interfaces";
-import { UserContext } from "../UserContext/UserContext";
+import { Context } from "../AppContext/AppContext";
 import "./CardCharater.scss";
 
 const CardCharacter = () => {
@@ -11,7 +11,7 @@ const CardCharacter = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const userContext = useContext(UserContext);
+  const userContext = useContext(Context);
 
   const { charactersArray }: any = userContext;
 

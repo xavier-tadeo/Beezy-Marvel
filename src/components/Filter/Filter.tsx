@@ -1,11 +1,11 @@
 import { useContext } from "react";
 
 import { FormElement } from "../../interfaces/interfaces";
-import { UserContext } from "../UserContext/UserContext";
+import { Context } from "../AppContext/AppContext";
 import "./Filter.scss";
 
 const Filter = () => {
-  const userContext = useContext(UserContext);
+  const userContext = useContext(Context);
 
   const { nameCharacter, setNameCharacter }: any = userContext;
 
