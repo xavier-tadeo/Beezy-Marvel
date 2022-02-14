@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
-import { UserContext } from "../UserContext/UserContext";
+import { Context } from "../AppContext/AppContext";
 import "./Footer.scss";
 
 const Footer = () => {
-  const userContext = useContext(UserContext);
+  const userContext = useContext(Context);
 
   const { offset, setOffset }: any = userContext;
 

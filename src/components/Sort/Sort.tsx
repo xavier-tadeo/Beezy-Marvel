@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { UserContext } from "../UserContext/UserContext";
+import { Context } from "../AppContext/AppContext";
 import "./Sort.scss";
 
 const Sort = () => {
-  const userContext = useContext(UserContext);
+  const userContext = useContext(Context);
 
   const { orderCharacters, setOrderCharacters }: any = userContext;
 

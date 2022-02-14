@@ -1,14 +1,13 @@
-import "./CharactersListPage.scss";
-
 import { useContext } from "react";
-import CharactersList from "../../components/CharactersList/CharactersList";
 
-import { UserContext } from "../../components/UserContext/UserContext";
+import CharactersList from "../../components/CharactersList/CharactersList";
+import { Context } from "../../components/AppContext/AppContext";
 import { ICharacters } from "../../interfaces/interfaces";
 import Spinner from "../../components/Spinner/Spinner";
+import "./CharactersListPage.scss";
 
 const CharactersListPage = () => {
-  const userContext = useContext(UserContext);
+  const userContext = useContext(Context);
 
   const { charactersArray }: any = userContext;
 
