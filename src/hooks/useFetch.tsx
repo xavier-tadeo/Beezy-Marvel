@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-import getCharacters from "../server/getCharacters";
+import getCharacters from "../services/getCharacters";
 
 const useFetch = (
   setCharactersArray: Function,
