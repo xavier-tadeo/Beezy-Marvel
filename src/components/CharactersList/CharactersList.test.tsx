@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom/extend-expect";
 import { render, screen } from "@testing-library/react";
 
-import { AppContext } from "../AppContext/AppContext";
+import { AppContext } from "../../context/AppContext/AppContext";
 import CharactersList from "./CharactersList";
 
 describe("Given a CharacterList component", () => {

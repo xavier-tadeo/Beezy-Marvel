@@ -3,7 +3,7 @@ import { Navigate, useNavigate, useParams } from "react-router-dom";
 
 import getCharacterId from "../../helpers/getCharacterId";
 import { ICaracteristicsCharacter } from "../../interfaces/interfaces";
-import { Context } from "../AppContext/AppContext";
+import { Context } from "../../context/AppContext/AppContext";
 import "./CardCharater.scss";
 
 const CardCharacter = () => {

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 
 import { FormElement } from "../../interfaces/interfaces";
-import { Context } from "../AppContext/AppContext";
+import { Context } from "../../context/AppContext/AppContext";
 import "./Filter.scss";
 
 const Filter = () => {

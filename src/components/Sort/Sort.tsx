@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Context } from "../AppContext/AppContext";
+import { Context } from "../../context/AppContext/AppContext";
 import "./Sort.scss";
 
 const Sort = () => {
