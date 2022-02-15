@@ -2,7 +2,7 @@ import "@testing-library/jest-dom/extend-expect";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import { AppContext } from "../AppContext/AppContext";
+import { AppContext } from "../../context/AppContext/AppContext";
 import Filter from "./Filter";
 
 describe("Given a Filter component", () => {

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 
 import CharactersList from "../../components/CharactersList/CharactersList";
-import { Context } from "../../components/AppContext/AppContext";
+import { Context } from "../../context/AppContext/AppContext";
 import { ICharacters } from "../../interfaces/interfaces";
 import Spinner from "../../components/Spinner/Spinner";
 import "./CharactersListPage.scss";

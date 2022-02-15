@@ -1,5 +1,5 @@
 import Header from "./components/Header/Header";
-import { AppContext } from "./components/AppContext/AppContext";
+import { AppContext } from "./context/AppContext/AppContext";
 import AppRouter from "./router/AppRouter";
 import "./App.scss";
 
