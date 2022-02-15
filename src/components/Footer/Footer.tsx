@@ -1,40 +1,21 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Context } from "../AppContext/AppContext";
 import "./Footer.scss";
 
 const Footer = () => {
-  const userContext = useContext(Context);
+  const charactersContext = useContext(Context);
 
-  const { offset, setOffset }: any = userContext;
-
-  const [isDisable, setIsDisable] = useState(true);
+  const { offset, setOffset, limit, setLimit }: any = charactersContext;
 
   const handleNextiusPage = () => {
     setOffset(offset + 20);
-
-    buttonDisable();
-  };
-
-  const handlePreviusPage = () => {
-    setOffset(offset - 20);
-
-    buttonDisable();
-  };
-  const buttonDisable = () => {
-    setIsDisable(false);
+    setLimit(limit + 20);
   };
 
   return (
     <div className="footer">
-      <button
-        className="footer__button"
-        onClick={handlePreviusPage}
-        disabled={isDisable}
-      >
-        Previus
-      </button>
       <button className="footer__button" onClick={handleNextiusPage}>
-        Next
+        Show More
       </button>
     </div>
   );
