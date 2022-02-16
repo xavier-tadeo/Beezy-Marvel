@@ -9,7 +9,6 @@ const Footer = () => {
 
   const handleNextiusPage = () => {
     setOffset(offset + 20);
-    setLimit(limit + 20);
   };
 
   return (
