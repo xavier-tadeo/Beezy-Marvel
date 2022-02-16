@@ -14,7 +14,14 @@ export const AppContext = ({ children }: AppContextProps) => {
   const [nameCharacter, setNameCharacter] = useState("");
   const [limit, setLimit] = useState(20);
   const [offset, setOffset] = useState(0);
-  useFetch(setCharactersArray, orderCharacters, nameCharacter, limit, offset);
+  useFetch(
+    setCharactersArray,
+    orderCharacters,
+    nameCharacter,
+    limit,
+    offset,
+    charactersArray
+  );
 
   return (
     <Context.Provider

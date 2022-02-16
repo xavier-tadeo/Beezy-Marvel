@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { ICharactersObject } from "../interfaces/interfaces";
 
 import getCharacters from "../services/getCharacters";
 
@@ -7,15 +8,25 @@ const useFetch = (
   orderCharacters: boolean,
   nameCharacter: string,
   limit: number,
-  offset: number
+  offset: number,
+  charactersArray: Array<ICharactersObject>
 ) => {
   useEffect(() => {
     getCharacters(orderCharacters, nameCharacter, limit, offset).then(
       (results) => {
-        setCharactersArray(results);
+        console.log(results);
+        setCharactersArray(charactersArray, [charactersArray, ...results]);
+        console.log(charactersArray);
       }
     );
-  }, [setCharactersArray, orderCharacters, nameCharacter, limit, offset]);
+  }, [
+    setCharactersArray,
+    orderCharacters,
+    nameCharacter,
+    limit,
+    offset,
+    charactersArray,
+  ]);
 };
 
 export default useFetch;
