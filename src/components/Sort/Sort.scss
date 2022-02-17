@@ -17,9 +17,11 @@
     width: 100px;
     top: 160px;
     @extend %flex-center-center;
+    transition: background-color 1s, color 1s, transform 2s;
   }
 
   &__button:hover {
     @extend %button-hover;
+    transition: background-color 1s, color 1s, transform 2s;
   }
 }
