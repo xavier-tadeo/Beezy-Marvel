@@ -22,6 +22,10 @@
     top: 160px;
     @extend %flex-center-center;
   }
+
+  &__button:hover {
+    @extend %button-hover;
+  }
 }
 
 .isDisable {

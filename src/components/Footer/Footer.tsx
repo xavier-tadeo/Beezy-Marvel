@@ -8,7 +8,7 @@ const Footer = () => {
 
   const charactersContext = useContext(Context);
 
-  const { offset, setOffset }: any = charactersContext;
+  const { offset, setOffset, charactersArray }: any = charactersContext;
 
   const handleNextiusPage = () => {
     setPage(page + 1);
@@ -22,15 +22,19 @@ const Footer = () => {
 
   return (
     <div className="footer">
-      <button
-        className={page === 1 ? "isDisable" : "footer__button"}
-        onClick={handlePreviusPage}
-      >
-        Back Page
-      </button>
-      <button className="footer__button" onClick={handleNextiusPage}>
-        Next Page
-      </button>
+      {charactersArray.length === 20 && (
+        <>
+          <button
+            className={page === 1 ? "isDisable" : "footer__button"}
+            onClick={handlePreviusPage}
+          >
+            Back Page
+          </button>
+          <button className="footer__button" onClick={handleNextiusPage}>
+            Next Page
+          </button>
+        </>
+      )}
     </div>
   );
 };
