@@ -11,9 +11,9 @@ const CardCharacter = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const userContext = useContext(Context);
+  const charactersContext = useContext(Context);
 
-  const { charactersArray }: any = userContext;
+  const { charactersArray }: any = charactersContext;
 
   const characterOne = getCharacterId(id, charactersArray);
 

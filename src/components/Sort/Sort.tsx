@@ -3,9 +3,9 @@ import { Context } from "../../context/AppContext/AppContext";
 import "./Sort.scss";
 
 const Sort = () => {
-  const userContext = useContext(Context);
+  const charactersContext = useContext(Context);
 
-  const { orderCharacters, setOrderCharacters }: any = userContext;
+  const { orderCharacters, setOrderCharacters }: any = charactersContext;
 
   const handleOrder = () => {
     setOrderCharacters(!orderCharacters);

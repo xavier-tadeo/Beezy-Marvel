@@ -5,9 +5,9 @@ import { Context } from "../../context/AppContext/AppContext";
 import "./Filter.scss";
 
 const Filter = () => {
-  const userContext = useContext(Context);
+  const charactersContext = useContext(Context);
 
-  const { nameCharacter, setNameCharacter }: any = userContext;
+  const { nameCharacter, setNameCharacter }: any = charactersContext;
 
   const onChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     setNameCharacter(evt.target.value);
