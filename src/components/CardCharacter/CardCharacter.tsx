@@ -31,6 +31,7 @@ const CardCharacter = () => {
   return (
     <>
       <div className="characterOne" onClick={handleReturn}>
+        <button className="characterOne__button">Return</button>
         <h2 className="characterOne__title">{name}</h2>
         <div className="characterOne__image-container">
           <img
