@@ -12,7 +12,7 @@ const getCharacters = async (
     order = "-name";
   }
 
-  const url: any = process.env.REACT_APP_URL;
+  const url = process.env.REACT_APP_URL;
   let response;
   if (nameCharacter === "") {
     response = await fetch(

@@ -1,4 +1,4 @@
-import React, { createContext, ReactChild, useState } from "react";
+import { createContext, ReactChild, useState } from "react";
 import useFetch from "../../hooks/useFetch";
 import { IContextApp } from "../../interfaces/interfaces";
 
@@ -10,18 +10,19 @@ type AppContextProps = {
 
 export const AppContext = ({ children }: AppContextProps) => {
   const [charactersArray, setCharactersArray] = useState([]);
-  const [orderCharacters, setOrderCharacters] = useState(true);
-  const [nameCharacter, setNameCharacter] = useState("");
-  const [limit, setLimit] = useState(20);
-  const [offset, setOffset] = useState(0);
+  const [orderCharacters, setOrderCharacters] = useState<boolean>(true);
+  const [nameCharacter, setNameCharacter] = useState<string>("");
+  const [limit, setLimit] = useState<number>(20);
+  const [offset, setOffset] = useState<number>(0);
   useFetch(
     setCharactersArray,
     orderCharacters,
     nameCharacter,
     limit,
-    offset,
-    charactersArray
+    offset
+    // charactersArray
   );
+  console.log("AAAAAAAAAAAAAAAAAAAaaaa");
 
   return (
     <Context.Provider
