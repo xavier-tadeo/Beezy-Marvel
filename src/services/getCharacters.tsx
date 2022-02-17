@@ -1,7 +1,7 @@
 const getCharacters = async (
   orderCharacters: boolean,
   nameCharacter = "",
-  limit = 20,
+
   offset = 0
 ) => {
   let order;
@@ -15,12 +15,10 @@ const getCharacters = async (
   const url = process.env.REACT_APP_URL;
   let response;
   if (nameCharacter === "") {
-    response = await fetch(
-      `${url}&orderBy=${order}&offset=${offset}&limit=${limit}`
-    );
+    response = await fetch(`${url}&orderBy=${order}&offset=${offset}`);
   } else {
     response = await fetch(
-      `${url}&orderBy=${order}&offset=${offset}&limit=${limit}&nameStartsWith=${nameCharacter}`
+      `${url}&orderBy=${order}&offset=${offset}&nameStartsWith=${nameCharacter}`
     );
   }
 

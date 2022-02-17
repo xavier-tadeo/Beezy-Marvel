@@ -12,17 +12,15 @@ export const AppContext = ({ children }: AppContextProps) => {
   const [charactersArray, setCharactersArray] = useState([]);
   const [orderCharacters, setOrderCharacters] = useState<boolean>(true);
   const [nameCharacter, setNameCharacter] = useState<string>("");
-  const [limit, setLimit] = useState<number>(20);
+
   const [offset, setOffset] = useState<number>(0);
   useFetch(
     setCharactersArray,
     orderCharacters,
     nameCharacter,
-    limit,
+
     offset
-    // charactersArray
   );
-  console.log("AAAAAAAAAAAAAAAAAAAaaaa");
 
   return (
     <Context.Provider
@@ -33,8 +31,7 @@ export const AppContext = ({ children }: AppContextProps) => {
         setOrderCharacters,
         nameCharacter,
         setNameCharacter,
-        limit,
-        setLimit,
+
         offset,
         setOffset,
       }}
