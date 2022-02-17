@@ -5,7 +5,7 @@ import "./Footer.scss";
 const Footer = () => {
   const charactersContext = useContext(Context);
 
-  const { offset, setOffset, limit, setLimit }: any = charactersContext;
+  const { offset, setOffset }: any = charactersContext;
 
   const handleNextiusPage = () => {
     setOffset(offset + 20);
