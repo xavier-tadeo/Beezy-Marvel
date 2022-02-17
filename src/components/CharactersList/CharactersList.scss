@@ -30,6 +30,12 @@
     width: 130px;
     margin-top: 5px;
     border: 3px solid black;
+    transition: transform 5s;
+  }
+
+  &__image:hover {
+    transform: rotateY(180deg);
+    transition: transform 2s;
   }
 
   &__link {
@@ -43,5 +49,12 @@
     color: #fff;
     border: 2px solid #fff;
     border-radius: 16px;
+    transition: border 1s, color 1s, transform 1s;
+  }
+
+  &__link:hover {
+    border: 2px solid $red;
+    color: $red;
+    transition: border 1s, color 1s, transform 1s;
   }
 }
