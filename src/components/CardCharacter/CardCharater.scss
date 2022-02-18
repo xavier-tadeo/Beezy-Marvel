@@ -47,19 +47,24 @@
     border-radius: 50%;
   }
 
+  &__description,
+  &__comics {
+    width: 90%;
+    margin-top: 10px;
+  }
+
   &__description-paragraph {
     padding: 20px;
     color: #fff;
     font-family: $fontDescription;
     font-size: 18px;
     margin: 0;
+    text-align: center;
   }
 
   &__description-title,
   &__comics-title,
-  &__series-title,
-  &__stories-title,
-  &__events-title {
+  &__series-title {
     text-align: center;
     font-size: 20px;
     color: white;
@@ -71,8 +76,12 @@
     margin-top: 10px;
   }
 
-  &__list {
-    list-style: none;
+  &__list-comics {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     margin: 10px 0;
     padding: 0 10px;
@@ -80,11 +89,37 @@
     border-bottom: 1px solid black;
   }
 
-  &__item {
+  &__comics-image {
+    height: 200px;
+    width: 170px;
+    margin-top: 5px;
+    border: 3px solid black;
+    transition: transform 5s;
+  }
+
+  &__comics-image:hover {
+    transform: rotateY(180deg);
+    transition: transform 2s;
+  }
+
+  &__comics-parraf {
     padding: 10px;
     font-family: $fontButton;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
     color: #fff;
+  }
+}
+
+@media (min-width: 820px) {
+  .characterOne {
+    &__comics-image {
+      height: 400px;
+      width: 340px;
+    }
+
+    &__comics-parraf {
+      font-size: 25px;
+    }
   }
 }

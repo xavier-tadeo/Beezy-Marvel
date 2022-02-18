@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import { Navigate, Params, useNavigate, useParams } from "react-router-dom";
 
 import getCharacterId from "../../helpers/getCharacterId";
-import { ICaracteristicsCharacter } from "../../interfaces/interfaces";
 import { Context } from "../../context/AppContext/AppContext";
 import useFetchComics from "../../hooks/useFetchComics";
 
@@ -14,20 +13,18 @@ const CardCharacter = () => {
   const navigate = useNavigate();
 
   const [comicsArray, setComicsArray] = useState([]);
-  console.log(comicsArray);
+
   useFetchComics(id, setComicsArray);
 
   const charactersContext = useContext(Context);
   const { charactersArray }: any = charactersContext;
-  console.log(comicsArray);
 
   const characterOne = getCharacterId(id, charactersArray);
   if (!characterOne) {
     return <Navigate to={"/"} />;
   }
 
-  const { name, thumbnail, description, comics, series, stories, events } =
-    characterOne;
+  const { name, thumbnail, description } = characterOne;
 
   const handleReturn = () => {
     navigate(-1);
@@ -51,23 +48,23 @@ const CardCharacter = () => {
           <p className="characterOne__description-paragraph">{description}</p>
         </div>
         <div className="characterOne__comics">
-          <h5 className="characterOne__comics-title">
-            Appears in {comics.available} comics
-          </h5>
-          <ul className="characterOne__list">
+          <h5 className="characterOne__comics-title">Comics</h5>
+          <div className="characterOne__list-comics">
             {comicsArray.map((comic: any) => (
               <>
-                <p key={comic.id}>{comic.title}</p>
+                <p className="characterOne__comics-parraf" key={comic.id}>
+                  {comic.title}
+                </p>
                 <img
-                  className="character__image"
+                  className="characterOne__comics-image"
                   src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`}
                   alt={comic.title}
                 ></img>
               </>
             ))}
-          </ul>
+          </div>
         </div>
-        <div className="characterOne__series">
+        {/* <div className="characterOne__series">
           <h5 className="characterOne__series-title">
             Appears in {series.available} series
           </h5>
@@ -80,8 +77,8 @@ const CardCharacter = () => {
               )
             )}
           </ul>
-        </div>
-        <div className="characterOne__stories">
+        </div> */}
+        {/* <div className="characterOne__stories">
           <h5 className="characterOne__stories-title">
             Appears in {stories.available} stories
           </h5>
@@ -94,21 +91,7 @@ const CardCharacter = () => {
               )
             )}
           </ul>
-        </div>
-        <div className="characterOne__events">
-          <h5 className="characterOne__events-title">
-            Appears in {events.available} events
-          </h5>
-          <ul className="characterOne__list">
-            {events.items.map(
-              (event: ICaracteristicsCharacter, index: string) => (
-                <li className="characterOne__item" key={index}>
-                  {event.name}
-                </li>
-              )
-            )}
-          </ul>
-        </div>
+        </div> */}
       </div>
     </>
   );
