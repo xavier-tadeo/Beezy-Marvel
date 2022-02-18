@@ -33,10 +33,16 @@ const CardCharacter = () => {
     navigate(-1);
   };
 
+  const upScroll = () => {
+    window.scroll(0, 0);
+  };
+
   return (
     <>
-      <div className="characterOne" onClick={handleReturn}>
-        <button className="characterOne__button">Return</button>
+      <div className="characterOne">
+        <button className="characterOne__button" onClick={handleReturn}>
+          Return
+        </button>
         <h2 className="characterOne__title">{name}</h2>
         <div className="characterOne__image-container">
           <img
@@ -80,6 +86,9 @@ const CardCharacter = () => {
             ))}
           </div>
         </div>
+        <button className="characterOne__button-scroll" onClick={upScroll}>
+          Up
+        </button>
       </div>
     </>
   );
