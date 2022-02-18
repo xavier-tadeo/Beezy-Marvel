@@ -11,11 +11,13 @@ const Footer = () => {
   const { offset, setOffset, charactersArray }: any = charactersContext;
 
   const handleNextiusPage = () => {
+    window.scroll(0, 0);
     setPage(page + 1);
     setOffset(offset + 20);
   };
 
   const handlePreviusPage = () => {
+    window.scroll(0, 0);
     setPage(page - 1);
     setOffset(offset - 20);
   };
