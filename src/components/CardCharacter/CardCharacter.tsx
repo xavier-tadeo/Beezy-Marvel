@@ -19,8 +19,6 @@ const CardCharacter = () => {
   useFetchComics(id, setComicsArray);
   useFetchSeries(id, setSeriesArray);
 
-  console.log(seriesArray);
-
   const charactersContext = useContext(Context);
   const { charactersArray }: any = charactersContext;
 
@@ -72,9 +70,9 @@ const CardCharacter = () => {
           <div className="characterOne__list-series">
             {seriesArray.map((series: IItems) => (
               <div key={series.id}>
-                <p className="characterOne__comics-parraf">{series.title}</p>
+                <p className="characterOne__series-parraf">{series.title}</p>
                 <img
-                  className="characterOne__comics-image"
+                  className="characterOne__series-image"
                   src={`${series.thumbnail.path}.${series.thumbnail.extension}`}
                   alt={series.title}
                 ></img>
