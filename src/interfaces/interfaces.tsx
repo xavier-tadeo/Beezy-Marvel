@@ -10,6 +10,13 @@ export interface ICharacters {
   id: string;
 }
 
+export interface IItems {
+  title: string;
+
+  thumbnail: IThumbnail;
+  id: string;
+}
+
 export interface ICharactersObject {
   character: ICharacters;
 }

@@ -4,7 +4,7 @@ import { Navigate, Params, useNavigate, useParams } from "react-router-dom";
 import getCharacterId from "../../helpers/getCharacterId";
 import { Context } from "../../context/AppContext/AppContext";
 import useFetchComics from "../../hooks/useFetchComics";
-
+import { IItems } from "../../interfaces/interfaces";
 import "./CardCharater.scss";
 
 const CardCharacter = () => {
@@ -50,7 +50,7 @@ const CardCharacter = () => {
         <div className="characterOne__comics">
           <h5 className="characterOne__comics-title">Comics</h5>
           <div className="characterOne__list-comics">
-            {comicsArray.map((comic: any) => (
+            {comicsArray.map((comic: IItems) => (
               <>
                 <p className="characterOne__comics-parraf" key={comic.id}>
                   {comic.title}
