@@ -1,22 +1,27 @@
-import { useContext } from "react";
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Navigate, Params, useNavigate, useParams } from "react-router-dom";
 
 import getCharacterId from "../../helpers/getCharacterId";
 import { ICaracteristicsCharacter } from "../../interfaces/interfaces";
 import { Context } from "../../context/AppContext/AppContext";
+import useFetchComics from "../../hooks/useFetchComics";
+
 import "./CardCharater.scss";
 
 const CardCharacter = () => {
   window.scroll(0, 0);
-  const { id } = useParams();
+  const { id }: Readonly<Params<string>> = useParams();
   const navigate = useNavigate();
 
-  const charactersContext = useContext(Context);
+  const [comicsArray, setComicsArray] = useState([]);
+  console.log(comicsArray);
+  useFetchComics(id, setComicsArray);
 
+  const charactersContext = useContext(Context);
   const { charactersArray }: any = charactersContext;
+  console.log(comicsArray);
 
   const characterOne = getCharacterId(id, charactersArray);
-
   if (!characterOne) {
     return <Navigate to={"/"} />;
   }
@@ -50,13 +55,16 @@ const CardCharacter = () => {
             Appears in {comics.available} comics
           </h5>
           <ul className="characterOne__list">
-            {comics.items.map(
-              (comic: ICaracteristicsCharacter, index: string) => (
-                <li className="characterOne__item" key={index}>
-                  {comic.name}
-                </li>
-              )
-            )}
+            {comicsArray.map((comic: any) => (
+              <>
+                <p key={comic.id}>{comic.title}</p>
+                <img
+                  className="character__image"
+                  src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`}
+                  alt={comic.title}
+                ></img>
+              </>
+            ))}
           </ul>
         </div>
         <div className="characterOne__series">
