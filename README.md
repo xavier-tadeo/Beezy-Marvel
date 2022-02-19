@@ -1,6 +1,6 @@
 <img  src="./public/marvel.gif" hight="400" width="400">
 
-# Item Manager
+# Marvel App
 
 The goal was to create a small APP that fetches an API endpoint and shows the items in a result page.
 
