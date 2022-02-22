@@ -1,5 +1,11 @@
 .App {
-  background-image: url("https://i.ibb.co/n1y75zg/back.jpg)");
+  background: rgb(9, 9, 80);
+  background: linear-gradient(
+    90deg,
+    rgba(9, 9, 80, 1) 0%,
+    rgba(9, 9, 112, 1) 35%,
+    rgba(9, 9, 144, 1) 100%
+  );
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0;
